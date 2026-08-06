@@ -3,8 +3,9 @@ services:
   - type: web
     name: airbnb-backend
     env: docker
-    rootDirectory: backend
-    dockerfilePath: Dockerfile
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     region: oregon
     plan: free
     envVars:
@@ -24,8 +25,9 @@ services:
   - type: web
     name: airbnb-frontend
     env: docker
-    rootDirectory: frontend
-    dockerfilePath: Dockerfile
+    rootDir: frontend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     region: oregon
     plan: free
     envVars:
