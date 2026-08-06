@@ -3,8 +3,9 @@ services:
   - type: web
     name: airbnb-backend
     env: docker
-    dockerContext: ./backend
-    dockerfilePath: ./backend/Dockerfile
+    repo: https://github.com/lams-joy/airbnb-booking-system-backend
+    rootDir: backend
+    dockerfilePath: Dockerfile
     region: oregon
     plan: free
     envVars:
@@ -24,8 +25,9 @@ services:
   - type: web
     name: airbnb-frontend
     env: docker
-    dockerContext: ./frontend
-    dockerfilePath: ./frontend/Dockerfile
+    repo: https://github.com/lams-joy/airbnb-booking-system-backend
+    rootDir: frontend
+    dockerfilePath: Dockerfile
     region: oregon
     plan: free
     envVars:
